@@ -1,0 +1,136 @@
+.slider-container {
+  background: #f7f8f8 0% 0% no-repeat padding-box;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  width: 100%; /* Ekran genişliği kadar genişlet */
+}
+
+.slider > ul {
+  list-style: none;
+  display: flex;
+  gap: 44px;
+  overflow-x: none;
+}
+#upcoming-events {
+  text-align: center;
+  font: normal normal bold 40px/1.2 "FS Albert", sans-serif;
+  letter-spacing: 0px;
+  color: #042164;
+  opacity: 1;
+  /* font-size: 30px; */
+}
+.slider > ul > li {
+  display: grid;
+  background: #ffffff;
+  border-radius: 15px;
+  text-align: center;
+  min-width: 300px;
+  max-height: 335px;
+  min-height: 350px;
+  border: none;
+}
+
+.slider > ul > li > h4 {
+  justify-content: center;
+  font: 23px/43px FS Albert;
+  letter-spacing: 0px;
+  color: #ffffff;
+  background: #232b76 0% 0% no-repeat padding-box;
+  border-radius: 10px 10px 0px 0px;
+  margin: 0;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.about-card-body {
+  display: block;
+}
+
+.about-card-body > h6 {
+  text-align: center;
+  font: normal normal small 19px/18px "FS Albert", sans-serif;
+  letter-spacing: 0px;
+  color: #042164;
+  padding: 5px;
+  margin-top: 5px;
+  max-height: 90px;
+  display: block;
+  border: none;
+  max-height: none;
+}
+
+.slider .slider-card-image {
+  line-height: 0;
+}
+
+.slider .button-container {
+  display: inline-block;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+.slider .about-card-body > p > strong {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  font: normal normal normal 12px/12px FS Albert;
+  letter-spacing: 0px;
+  color: #042164;
+  opacity: 1;
+  margin-right: px;
+}
+.slider .about-card-body p {
+  text-align: center;
+  font: normal normal bold 18px/26px FS Albert;
+  letter-spacing: 0px;
+  color: #009fe3;
+}
+.slider .about-card-body hr {
+  max-width: 250px;
+  margin-bottom: 10px;
+}
+.slider .about-card-body:nth-child(3) {
+  margin-bottom: 0;
+}
+
+.slider p {
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.section > div.slider-wrapper {
+  margin: auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 1300px) {
+  .section > div.slider-wrapper {
+    max-width: 960px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .section > div.slider-wrapper {
+    max-width: 720px;
+  }
+}
+
+@media screen and (max-width: 785px) {
+  .section > div.slider-wrapper {
+    max-width: 480px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .section > div.slider-wrapper {
+    max-width: 240px;
+  }
+}

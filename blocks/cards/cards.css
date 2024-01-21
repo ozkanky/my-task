@@ -1,31 +1,50 @@
-.cards > ul {
+.cards {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
-  grid-gap: 16px;
+  grid-template-columns: repeat(4, minmax(400px, 400px));
+  gap: 40px;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
 }
 
-.cards > ul > li {
-  border: 1px solid var(--dark-color);
-  background-color: var(--background-color)
+/* titles properties */
+.title-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* title speakers */
+#speakers {
+  text-align: center;
+  font: normal normal bold 40px/43px FS Albert;
+  letter-spacing: 0px;
+  color: #042164;
 }
 
-.cards .cards-card-body {
-  margin: 16px;
+/* title dates button */
+.title-dates {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin-bottom: 45px;
 }
 
-.cards .cards-card-image {
-  line-height: 0;
+/* cards paragraf */
+
+.cards div h6 {
+  text-align: center;
+  font: normal normal bold 21px/37px FS Albert;
+  letter-spacing: 0px;
+  color: #042164;
 }
 
-.cards .cards-card-body > *:first-child {
-  margin-top: 0;
-}
-
-.cards > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+/*button see bio */
+button {
+  text-align: center;
+  font: normal normal 25px/30px FS Albert;
+  letter-spacing: 0px;
+  color: white;
 }

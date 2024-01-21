@@ -1,9 +1,14 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+ background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029;
   width: 100%;
   z-index: 2;
   position: fixed;
+  padding:px;
+  top: 0px;
+left: 0px;
+
 }
 
 header nav {
@@ -13,7 +18,7 @@ header nav {
     'hamburger brand tools' var(--nav-height)
     'sections sections sections' 1fr / auto 1fr auto;
   align-items: center;
-  gap: 0 2em;
+  gap:  15em;
   margin: auto;
   max-width: 1264px;
   height: var(--nav-height);

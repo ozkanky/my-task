@@ -18,7 +18,7 @@ main .hero-container {
   display: grid;
   grid-template-rows: repeat(1,3fr);
   grid-template-columns: repeat(1,2fr);
-text-align: le;
+text-align: left;
 overflow: hidden;
 }
 .non-btn div picture img{

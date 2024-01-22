@@ -1,29 +1,24 @@
 export default function decorate(block) {
-
-
   [...block.children].forEach((row) => {
-    [...row.children].forEach((col)=>7
-)
+    [...row.children].forEach((col) => 7);
     if (row.children.length === 1 && row.querySelector("picture")) {
       row.className = "about-card-image";
     } else {
       row.className = "about-card-body";
     }
-if (row.children.length === 1 && row.querySelector("a")) {
-  row.className = "btn";
-} else{
-  row.className="non-btn"
-}
-console.log(row);
-  
-    
+    if (row.children.length === 1 && row.querySelector("a")) {
+      row.className = "btn";
+    } else {
+      row.className = "non-btn";
+    }
 
-    // Diğer işlemleri devam ettir...
     const loginElement = document.querySelector(
       "body > main > div.section.hero-container > div > div > div.about-card-body > div:nth-child(3)"
     );
     const titleElement = document.querySelector("#next-webinar");
-    const counterElement = document.querySelector(".about-card-body #wednesday-25-february-2021");
+    const counterElement = document.querySelector(
+      ".about-card-body #wednesday-25-february-2021"
+    );
 
     const titleParent = titleElement.parentElement;
     titleParent.classList.add("title-parent");
@@ -32,4 +27,62 @@ console.log(row);
       loginElement.classList.add("btn-res");
     }
   });
+
+  //!conter innerHTML
+
+  const counterDiv = document.createElement("div");
+  counterDiv.classList.add("countdown");
+  counterDiv.innerHTML = `
+          <div class='timer'>
+            <h2 id='days'>00</h2>
+            <small>Days</small>
+          </div>
+    
+           <div class='timer'>
+            <h2 id='hours'>00</h2>
+            <small>Hours</small>
+          </div>
+    
+           <div class='timer'>
+            <h2 id='minutes'>00</h2>
+            <small>Minutes</small>
+          </div>
+    
+           <div class='timer'>
+            <h2 id='seconds'>00</h2>
+            <small>Seconds</small>
+          </div>
+          `;
+  const counter = document.querySelector(
+    ".hero-container > div > div > div:nth-child(2) > div:nth-child(2)>h5"
+  );
+  console.log(counter);
+  counter.appendChild(counterDiv);
+
+  //!   counter
+
+  const days = document.querySelector("#days");
+
+  const hours = document.getElementById("hours");
+  const minutes = document.getElementById("minutes");
+  const seconds = document.getElementById("seconds");
+
+  const currentYear = new Date().getFullYear();
+  const newYearTime = new Date(`February 25, 2025 00:00:00`);
+
+  const updateCountDownTime = () => {
+    const currentTime = new Date();
+    const diff = newYearTime - currentTime;
+    const d = Math.floor(diff / 1000 / 60 / 60 / 24);
+    const h = Math.floor(diff / 1000 / 60 / 60) % 24;
+    const m = Math.floor(diff / 1000 / 60) % 24;
+    const s = Math.floor(diff / 1000) % 24;
+
+   days.innerHTML = d < 10 ? `0${d}` : d;
+   hours.innerHTML = h < 10 ? `0${h}` :h;
+   minutes.innerHTML = m < 10 ? `0${m}` : m;
+   seconds.innerHTML = s < 10 ? `0${s}` : s;
+
+  };
+  setInterval(updateCountDownTime, 1000);
 }

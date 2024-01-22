@@ -4,35 +4,40 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
-  margin: auto;
-  width: 100%; /* Ekran genişliği kadar genişlet */
+  margin: auto; 
+  width: 100%;  
 }
-
+.slider-wrapper{
+  width: 100%;
+ } 
+.slider{
+  width: 100%;
+ } 
 .slider > ul {
-  list-style: none;
+  list-style-type: none;
   display: flex;
-  gap: 44px;
-  overflow-x: none;
+  flex-direction: row;
+  gap: 44px; 
+  overflow-x: none; 
+   width: 100%; 
+ } 
+
+.title-dates > div > a{
+  border: 1px solid red;
 }
 #upcoming-events {
   text-align: center;
   font: normal normal bold 40px/1.2 "FS Albert", sans-serif;
   letter-spacing: 0px;
   color: #042164;
-  opacity: 1;
-  /* font-size: 30px; */
-}
-.slider > ul > li {
-  display: grid;
-  background: #ffffff;
-  border-radius: 15px;
-  text-align: center;
-  min-width: 300px;
-  max-height: 335px;
-  min-height: 350px;
-  border: none;
-}
+    
+}  
+.slider > ul > li{
+height: 400px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border-radius: 10px;
 
+}
 .slider > ul > li > h4 {
   justify-content: center;
   font: 23px/43px FS Albert;
@@ -41,48 +46,50 @@
   background: #232b76 0% 0% no-repeat padding-box;
   border-radius: 10px 10px 0px 0px;
   margin: 0;
-  width: 100%;
+  width:330px ;
   padding-top: 15px;
   padding-bottom: 10px;
 }
-.about-card-body {
-  display: block;
-}
 
-.about-card-body > h6 {
+
+ .about-card-body > h6 {
   text-align: center;
   font: normal normal small 19px/18px "FS Albert", sans-serif;
   letter-spacing: 0px;
   color: #042164;
   padding: 5px;
   margin-top: 5px;
-  max-height: 90px;
+  max-height: 100px;
+  min-height: 100px;
   display: block;
   border: none;
-  max-height: none;
-}
+} 
 
-.slider .slider-card-image {
-  line-height: 0;
-}
 
-.slider .button-container {
+
+ .slider .button-container {
   display: inline-block;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 0px;
-}
+  
+
+
+text-align: center;
+font: normal normal bold 13px/27px FS Albert;
+letter-spacing: 0px;
+color: #1490DF;
+
+}  
 
 .slider .about-card-body > p > strong {
   display: flex;
   flex-direction: row;
   text-align: center;
-  font: normal normal normal 12px/12px FS Albert;
+  font: normal normal normal 14px/12px FS Albert;
   letter-spacing: 0px;
   color: #042164;
-  opacity: 1;
-  margin-right: px;
+ 
 }
 .slider .about-card-body p {
   text-align: center;
@@ -92,45 +99,98 @@
 }
 .slider .about-card-body hr {
   max-width: 250px;
-  margin-bottom: 10px;
-}
-.slider .about-card-body:nth-child(3) {
-  margin-bottom: 0;
-}
-
-.slider p {
-  margin: 0;
+ margin-bottom: 0;
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
-
-.section > div.slider-wrapper {
-  margin: auto;
-  width: 100%;
+.cards-container > div:nth-child(2) > div > div > div:nth-child(2) > p.button-container > a{
+  background-color: #042164;
 }
 
-@media screen and (max-width: 1300px) {
-  .section > div.slider-wrapper {
-    max-width: 960px;
-  }
+ ul > li:nth-child(1) > div:nth-child(4) > p:nth-child(1) > strong > a, 
+ ul > li:nth-child(2) > div:nth-child(4) > p:nth-child(1) > strong > a {
+
+ background-color: #009fe3;
 }
 
-@media screen and (max-width: 1024px) {
-  .section > div.slider-wrapper {
-    max-width: 720px;
-  }
+.slider > ul > li:nth-child(3) a.button, 
+.slider > ul > li:nth-child(4) a.button{
+  color:#009fe3 ;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px #1490DF60;
+border: 1px solid #1490DF;
+border-radius: 29px;
+padding-top:1px;
+padding-bottom: 1px;
+/* margin-bottom: ; */
+} 
+.slider> ul > li:nth-child(1) > div:nth-child(4){
+  margin-bottom: 0;
+ }
+.title-dates > div:nth-child(1) > a {
+  border: 4px solid #042164;
+  background-color: #FFFFFF;
+  color: #042164;
 }
 
-@media screen and (max-width: 785px) {
+.title-dates > div:nth-child(2) > a {
+  background-color: #042164;
+  color: #FFFFFF;
+  border: none;
+}
+
+.title-dates > div:nth-child(1) > a:checked {
+  border: 4px solid #1490DF;
+  background-color: #FFFFFF;
+  color: #1490DF;
+}
+
+.title-dates > div:nth-child(2) > a:checked {
+  border: 4px solid #1490DF;
+  background-color: #FFFFFF;
+  color: #1490DF;
+}
+
+.title-dates > div:nth-child(1) > a:checked ~ .title-dates > div:nth-child(2) > a {
+  border: 4px solid #1490DF;
+  background-color: #FFFFFF;
+  color: #1490DF;
+}
+
+.title-dates > div:nth-child(2) > a:checked ~ .title-dates > div:nth-child(1) > a {
+  background-color: #042164;
+  color: #FFFFFF;
+  border: none;
+}
+
+.title-dates > div:nth-child(1) > a::after,
+.title-dates > div:nth-child(2) > a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+.title-dates > div:nth-child(1) > a:checked::after,
+.title-dates > div:nth-child(2) > a:checked::after {
+  opacity: 1;
+}
+
+/* @media screen and (max-width: 785px) {
   .section > div.slider-wrapper {
     max-width: 480px;
   }
-}
+} */
 
-@media screen and (max-width: 520px) {
+/* @media screen and (max-width: 520px) {
   .section > div.slider-wrapper {
     max-width: 240px;
   }
-}
+} */

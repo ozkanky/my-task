@@ -1,7 +1,5 @@
 export default function decorate(block) {
   [...block.children].forEach((row) => {
-  
-
     if (row.children.length === 1 && row.querySelector("picture")) {
       row.className = "about-card-image";
     } else {
@@ -13,20 +11,14 @@ export default function decorate(block) {
       row.className = "non-btn";
     }
 
-    
     const titleElement = document.querySelector("#next-webinar");
-    const counterElement = document.querySelector(".hero-container > div > div > div:nth-child(2) > div")
-    
+    // const counterElement = document.querySelector(".hero > div > ");
 
     const titleParent = titleElement.parentElement;
     titleParent.classList.add("title-parent");
-
-    
   });
   //!conter innerHTML
-  const counter = document.querySelector(
-    ".hero-container > div > div > div:nth-child(2) h5"
-  );
+  const counter = document.querySelector(".hero> .non-btn>.title-parent h5");
 
   const counterDiv = document.createElement("div");
   counterDiv.classList.add("countdown");
@@ -51,10 +43,8 @@ export default function decorate(block) {
             <small>Seconds</small>
           </div>
           `;
-  
+
   console.log(counter);
-
-
 
   counter.appendChild(counterDiv);
 
@@ -77,11 +67,10 @@ export default function decorate(block) {
     const m = Math.floor(diff / 1000 / 60) % 24;
     const s = Math.floor(diff / 1000) % 24;
 
-   days.innerHTML = d < 10 ? `0${d}` : d;
-   hours.innerHTML = h < 10 ? `0${h}` :h;
-   minutes.innerHTML = m < 10 ? `0${m}` : m;
-   seconds.innerHTML = s < 10 ? `0${s}` : s;
-
+    days.innerHTML = d < 10 ? `0${d}` : d;
+    hours.innerHTML = h < 10 ? `0${h}` : h;
+    minutes.innerHTML = m < 10 ? `0${m}` : m;
+    seconds.innerHTML = s < 10 ? `0${s}` : s;
   };
   setInterval(updateCountDownTime, 1000);
 }

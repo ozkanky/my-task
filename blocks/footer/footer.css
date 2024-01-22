@@ -1,7 +1,6 @@
-.footer .default-content-wrapper   {
-  border: 3px solid red;
+.footer .default-content-wrapper {
   padding: 2rem;
-  background: #FFFFFF;
+  background: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,20 +11,18 @@
   max-width: 100%;
   margin: auto;
 }
-.footer img{
+.footer img {
   left: 210px;
-width: 207px;
+  width: 207px;
 }
 
 .footer.block h3#footer-note {
   text-align: right;
-font: normal normal normal 16px/24px FS Albert;
-letter-spacing: 0px;
-color: #333333;
-opacity: 1;
-
+  font: normal normal normal 16px/24px FS Albert;
+  letter-spacing: 0px;
+  color: #333333;
+  opacity: 1;
 }
 
-
-
-@media screen and (max-width: 900px){}
+@media screen and (max-width: 900px) {
+}

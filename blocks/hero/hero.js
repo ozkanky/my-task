@@ -1,6 +1,7 @@
 export default function decorate(block) {
   [...block.children].forEach((row) => {
-    [...row.children].forEach((col) => 7);
+  
+
     if (row.children.length === 1 && row.querySelector("picture")) {
       row.className = "about-card-image";
     } else {
@@ -12,23 +13,20 @@ export default function decorate(block) {
       row.className = "non-btn";
     }
 
-    const loginElement = document.querySelector(
-      "body > main > div.section.hero-container > div > div > div.about-card-body > div:nth-child(3)"
-    );
+    
     const titleElement = document.querySelector("#next-webinar");
-    const counterElement = document.querySelector(
-      ".about-card-body #wednesday-25-february-2021"
-    );
+    const counterElement = document.querySelector(".hero-container > div > div > div:nth-child(2) > div")
+    
 
     const titleParent = titleElement.parentElement;
     titleParent.classList.add("title-parent");
 
-    if (loginElement) {
-      loginElement.classList.add("btn-res");
-    }
+    
   });
-
   //!conter innerHTML
+  const counter = document.querySelector(
+    ".hero-container > div > div > div:nth-child(2) h5"
+  );
 
   const counterDiv = document.createElement("div");
   counterDiv.classList.add("countdown");
@@ -53,10 +51,11 @@ export default function decorate(block) {
             <small>Seconds</small>
           </div>
           `;
-  const counter = document.querySelector(
-    ".hero-container > div > div > div:nth-child(2) > div:nth-child(2)>h5"
-  );
+  
   console.log(counter);
+
+
+
   counter.appendChild(counterDiv);
 
   //!   counter

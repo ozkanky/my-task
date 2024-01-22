@@ -3,16 +3,22 @@
 
 main .hero-container {
   padding: 0; 
-  position: relative;
-  /* min-height: 600px; */
+ 
+}
+
+.hero{
+  padding: 0; 
+  display: flex;
+ min-height: 600px;
   background-image: url('http://localhost:3000/media_13cda459d5e1e3bc127fa6a56f6b8d544307f8c53.png?width=750&format=png&optimize=medium');
   background-size: cover;
   background-position:center center;
-  /* width: 100%;
-  height: 100%; */
+  width: 100%;
+  height: 100%;
   display: grid;
-  grid-template-rows: repeat(1,2fr);
-text-align: center;
+  grid-template-rows: repeat(1,3fr);
+  grid-template-columns: repeat(1,2fr);
+text-align: le;
 overflow: hidden;
 }
 .non-btn div picture img{
@@ -33,13 +39,13 @@ width: 846px;
 display: grid;
 grid-template-rows: repeat(2,1fr);
 }
-/* #next-webinar{
+#next-webinar{
   text-align: left;
 font: normal normal bold 21px/37px FS Albert;
 letter-spacing: 0px;
 color: #042164;
 opacity: 1;
-} */
+}
 .title-parent h4{
   text-align: left;
 font: italic normal bold 40px/45px FS Albert;
@@ -89,81 +95,27 @@ margin-top: 0;
 .timer>small{
   margin-bottom: 10px;
 }
-
-.btn {
-  display: flex;
+.btn>div {
+  position:absolute;
   top: 50%;
-  right: 280px;
+  right:280px; 
   transform: translateY(-50%);
-  /* background: transparent linear-gradient(180deg, #FFD531 0%, #FF8300 100%) 0% 0% no-repeat padding-box; */
-/* box-shadow: 0px 3px 6px #00000029; */
-border-radius: 25px;
-opacity: 1;
-}
-
-
-
-@media(max-width: 767px){
-.title-parent h4{
-  font: italic normal bold 30px/45px FS Albert;
-}
-.title-parent p{
-  text-align: left;
-font: normal normal bold 25px/43px FS Albert;
-}
-.non-btn h5{
-  text-align: left;
-font: normal normal normal 20px/57px FS Albert;
-letter-spacing: 0px;
-color: #FFFFFF;
-margin-left: 5px;
-}
-.countdown{
- display: flex;
- justify-content: space-evenly;
- max-width: 220px;
-text-align: center;
-font: normal normal normal 20px/5px FS Albert;
-letter-spacing: 0px;
-color: #FFFFFF;
-
-margin-left: 20px;
-gap: 10px;
-}
-.btn {
-  position: flex;
-  
-  right: 280px;
-  transform: translateY(-50%);
-}
-}
-
-/* Geniş ekranlar (desktop) */
-@media screen and (min-width: 1200px) {
-  .hero-wrapper {
-    margin-left: 25px;
-  }
-}
-
-/* Orta boy ekranlar (tablet) */
-@media screen and (max-width: 1199px) {
-  .hero-wrapper {
-    margin-left: 100px; 
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
   
 }
 
-/* Küçük ekranlar (telefon) */
-@media screen and (max-width: 767px) {
-  .hero-wrapper {
-    margin-left: 20px; 
-  }
-  .non-btn {
-    width: 100%;
-    margin-left: 0;
-  }
+/* @media screen and (max-width: 768px) {
   .btn {
-    position: static;
-    transform: translateY(0);
-  }
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  position: none;
+  
 }
+} */

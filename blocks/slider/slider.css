@@ -22,9 +22,8 @@
   list-style-type: none;
   display:flex;
   gap: 44px; 
-  overflow-x: none; 
+ 
   height: 400px;
-  /* position: relative; */
 }  
 
 .slider > ul > li{
